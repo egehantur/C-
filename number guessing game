@@ -1,0 +1,44 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp1
+{
+    class ConsoleApp1
+    {
+        static void Main(string[] args) {
+
+            Random random = new Random();
+            int choice = random.Next(0,11);
+
+            int round = 5;
+
+            Console.WriteLine("Welcome to number guessing game!");
+            
+
+            while(round > 0) { 
+                Console.WriteLine("Write your choice: ");
+                int index = Convert.ToInt32(Console.ReadLine());
+            
+                if (index == choice)
+                {
+                    Console.Write("Correct! You won!");
+                    break;
+
+                }
+
+                else if (index < choice)
+                {
+                    Console.WriteLine("Go up!");
+
+                }
+                else if (index > choice)
+                {
+                    Console.WriteLine("Go down!");
+                }
+            }
+
+            
+
+        }
+    }
+}
