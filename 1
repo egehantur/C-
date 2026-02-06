@@ -1,0 +1,44 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp1
+{
+    class ConsoleApp1
+    {
+        static void Main(string[] args) {
+
+            Random random = new Random();
+            double a = random.NextDouble();
+            int b = random.Next(0, 11);
+            double c = a + b;
+
+            Console.Write("What is yout name? ");
+            String name = Console.ReadLine();
+            name = name.ToUpper();
+
+            Console.Write("What is your age? ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("What is your telephone number? ");
+            String number = Console.ReadLine();
+            number = number.Replace(" ","-");
+
+
+            Console.WriteLine("Hello " + name + ". You are " + age + " years old. Your telephone number is " + number);
+            Console.WriteLine(c);
+
+            Console.Write("Enter side A: ");
+            double A = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter side B: ");
+            double B = Convert.ToDouble(Console.ReadLine());
+
+            double C = Math.Sqrt((A*A) + (B*B));
+            Console.WriteLine("Hypotenus is: " + C);
+
+            Console.Beep();
+
+            Console.ReadKey();
+        }
+    }
+}
