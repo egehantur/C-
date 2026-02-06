@@ -1,0 +1,34 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp1
+{
+    class ConsoleApp1
+    {
+        static void Main(string[] args) {
+
+
+            Random rnd = new Random();
+            int choice = rnd.Next(1,4);
+            String compchoice = Convert.ToString(choice);
+
+            Console.Write("Rock,Paper,Scissor? ");
+            String plchoice = Console.ReadLine();
+            plchoice = plchoice.ToLower();
+
+            if (compchoice == "1" && plchoice == "rock" || compchoice == "2" && plchoice == "paper" || compchoice == "3" && plchoice == "scissor")
+            {
+                Console.WriteLine("Draw!");
+            }
+            else if (compchoice == "1" && plchoice == "paper" || compchoice == "2" && plchoice == "scissor" || compchoice == "3" && plchoice == "rock")
+            {
+                Console.WriteLine("You Won!");
+            }
+            else {
+                Console.WriteLine("You Lost!");
+            }
+
+
+        }
+    }
+}
